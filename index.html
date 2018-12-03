@@ -28,25 +28,26 @@
 
 </head>
 
-<body>
-    <div class="jumbotron">
-            <h1>Your Favorite Giphy Web Page</h1>
+<body class="body">
+    <div class="container">
 
-    <div id="buttons-view"> </div><br>
+        <div class="header">
+            <h1 id="h">Your Favorite Giphy Web Page</h1>
+        </div>
 
-    <form id="gif-form">
-            <label for="gif-input">Add a New Giphy Button Here!</label>
+        <div id="buttons-view"> </div>
+
+        <form id="gif-form">
+            <label class="label2" for="gif-input">Add a New Giphy Button Name Here!</label>
             <input type="text" id="gif-input">
-            <br>
-      
             <!-- Button triggers new Giphy to be added -->
             <input id="add-gif" type="submit" value="Add Giphy!">
-          </form>
+        </form>
 
 
-    <div id="crashGif-view"></div>
+        <div class="row" id="crashGif-view"></div>
 
-</div>
+    </div>
 
 
 

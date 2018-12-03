@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+}
+
+
+.container {
+    margin-top: 30px;
+    background-color: chartreuse;
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+
+
+.body{
+    background-color: coral;
+}
+#h {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    padding: 40px;
+    background-color: blue;
+    color:coral;
+}
+#crashGif-view {
+    
+    
+}
+.crash {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    
+    
+    
+    
+}
+
+#gif-form {
+    text-align: right;
+}
+.gif{
+    margin-top: 10px;
+    margin-bottom: 50px;
+    margin-left: 25px;
+    margin-right: 25px;
+    
+    
+    
+}
+#buttons-view {
+    margin-top: 30px;
+}
+.gif-btn {
+    margin: 10px;
+    background-color: palevioletred;
+    color: blanchedalmond;
+
+}
+#add-gif {
+    background-color: lightseagreen;
+
+}
+.label{
+    /* margin-bottom: 25px; */
+    background-color: blanchedalmond;
+    /* padding: 2px;
+    padding-right: 5px;
+    padding-left: 5px; */
+    position: relative;
+    right: 98px;
+    top: 65px;
+    padding:5px;
+}
+.label2 {
+     margin-bottom: 25px; 
+    background-color: blanchedalmond;
+    padding: 2px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+.p {
+    margin-top: 20px;
+    background-color: magenta;
+    
+
+}
