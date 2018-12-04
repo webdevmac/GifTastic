@@ -15,7 +15,7 @@
 
 
 .body{
-    background-color: coral;
+    background-color: purple;
 }
 #h {
     text-align: center;
@@ -71,8 +71,8 @@
     padding-right: 5px;
     padding-left: 5px; */
     position: relative;
-    right: 98px;
-    top: 65px;
+    right: 130px;
+    top: 99px;
     padding:5px;
 }
 .label2 {

@@ -8,7 +8,7 @@ $(document).ready(function () {
   //Function for displaying arrayCrash Giphy 
   function displayGifInfo() {
     var crash = $(this).attr("data-name");
-    var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=K5eSo5DJFXJ30reVokW1DTSx8zRja5oI&q=" + crash + "&limit=10&offset=0&rating=G&lang=en";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=K5eSo5DJFXJ30reVokW1DTSx8zRja5oI&q=" + crash + "&limit=10&offset=0&&lang=en";
 
 
     //creating an Ajax call for crash
@@ -26,7 +26,9 @@ $(document).ready(function () {
         // Retrieving the URL for the image
         var gifImage = $("<img class='gif'>");
         gifImage.attr("src", response.data[i].images.fixed_height.url);
-        
+        gifImage.attr("data-state", "animate");
+        gifImage.attr("data-still", response.data[i].images.fixed_height_still.url);
+        gifImage.attr("data-animate",response.data[i].images.fixed_height.url);
         
         crashDiv.append(gifImage);
         crashDiv.append(p);
@@ -60,30 +62,26 @@ $(document).ready(function () {
       $("#buttons-view").append(x);
     }
   }
-  // click on the gif to animate or pause funtion
-  // $("#gif").on("click", function() {
-  //     $(gifImage).attr(data-state);
-  //     console.log(gifImage);
+  // click on the gif to animate or still funtion
+  $(document).on("click",".gif",function() {
+      
+    var state = $(this).attr("data-state");
 
-  //   var state = $(this).attr("data-state");
-  //     console.log(state);
+    if(state === "still") {
 
+      $(this).attr("src", $(this).attr("data-animate"));
+      $(this).attr("data-state", "animate");
 
-  //   if(state === "still") {
+    }
+      else if(state === "animate") {
 
-  //     $(this).attr("src", $(this).attr("data-animate"));
-  //     $(this).attr("data-state", "animate");
+        $(this).attr("src", $(this).attr("data-still"));
+        $(this).attr("data-state", "still");
 
-  //   }
-  //     else if(state === "animate") {
+      }
+      console.log(state);
 
-  //       $(this).attr("src", $(this).attr("data-still"));
-  //       $(this).attr("data-state", "still");
-
-  //     }
-  //     console.log(state);
-
-  // });
+  });
   
 
   
@@ -97,9 +95,10 @@ $(document).ready(function () {
 
     // Adding gif from the textbox to arrayCrash
     arrayCrash.push(crash);
-
+    
     // Calling renderButtons which handles the processing of our  arrayCrash
     renderButtons();
+    $("#gif-input").val("");
   });
   // Adding a click event listener to all elements with a class of "gif-btn"
   $(document).on("click", ".gif-btn", displayGifInfo);
