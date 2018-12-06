@@ -61,15 +61,13 @@
 
 }
 #add-gif {
-    background-color: lightseagreen;
-
+    background-color: darkgreen;
+    color: blanchedalmond;
+    margin-right: 10px;
 }
 .label{
-    /* margin-bottom: 25px; */
+    
     background-color: blanchedalmond;
-    /* padding: 2px;
-    padding-right: 5px;
-    padding-left: 5px; */
     position: relative;
     right: 130px;
     top: 99px;
@@ -81,10 +79,14 @@
     padding: 2px;
     padding-right: 5px;
     padding-left: 5px;
+    color: purple;
 }
 .p {
     margin-top: 20px;
     background-color: magenta;
     
 
+}
+#pause {
+    color: purple;
 }
